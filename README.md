@@ -10,7 +10,7 @@ Un service worker necesita `localhost` o HTTPS. Desde esta carpeta, ejecuta:
 python -m http.server 8000
 ```
 
-Abre `http://localhost:8000`. También puedes servir esta carpeta con cualquier servidor estático.
+Abre localhost:8000. También puedes servir esta carpeta con cualquier servidor estático.
 
 ## Funciones
 
@@ -40,9 +40,13 @@ La app conserva los archivos de la interfaz para abrirlos sin conexión tras la 
 
 ## Publicación y actualizaciones
 
-Este proyecto es estático y puede alojarse en GitHub Pages, Netlify o Vercel. La carpeta no necesita un proceso de compilación. Al publicar una nueva versión, actualiza el nombre de caché `CACHE` en `sw.js` para que los dispositivos reciban los archivos nuevos. No sobrescribas ni conectes este proyecto al repositorio de otra aplicación.
+- Repositorio público: https://github.com/yabingpt/ay-torq
+- Aplicación: https://yabingpt.github.io/ay-torq/
+- GitHub Pages publica desde la rama `main`, carpeta raíz. El deploy automático se ejecuta cuando se actualiza esa rama.
 
-Todavía no hay repositorio GitHub ni despliegue público asociado a esta copia. La publicación requiere acceso autorizado a una cuenta/proveedor y elegir el destino.
+AY TORQ es una app estática y no necesita proceso de compilación, backend ni credenciales. GitHub Pages está incluido en el plan gratuito para repositorios públicos; no hay una base de datos ni un servicio de pago configurado. Un dominio personalizado, si se desea después, podría tener coste por separado. [Planes de GitHub](https://docs.github.com/en/get-started/learning-about-github/githubs-plans).
+
+Para actualizarla, edita los archivos de este repositorio y publica los cambios en `main`; GitHub Pages desplegará la nueva versión automáticamente. Si cambias archivos de la interfaz, incrementa el valor de `CACHE` en `sw.js` para que las instalaciones PWA descarguen los recursos nuevos. Mantén este repositorio separado de cualquier otro proyecto.
 
 ## Diseño
 
