@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090c10">
+  <meta name="description" content="AY TORQ — registro personal de entrenamiento">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AY TORQ">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>AY TORQ — Training log</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#dashboard" aria-label="AY TORQ inicio"><span class="brand-mark">T</span><span>AY <b>TORQ</b><small>TRAINING LOG</small></span></a>
+      <button class="icon-button" id="install-button" aria-label="Instalar aplicación" title="Instalar aplicación" hidden>↓</button>
+      <button class="avatar" id="profile-shortcut" aria-label="Abrir perfil">T</button>
+    </header>
+    <main id="main" tabindex="-1"></main>
+    <nav class="bottom-nav" aria-label="Navegación principal">
+      <button data-view="dashboard" class="nav-item active"><span>⌂</span><small>Inicio</small></button>
+      <button data-view="routines" class="nav-item"><span>◫</span><small>Rutinas</small></button>
+      <button data-view="history" class="nav-item"><span>◷</span><small>Historial</small></button>
+      <button data-view="progress" class="nav-item"><span>▥</span><small>Progreso</small></button>
+      <button data-view="profile" class="nav-item"><span>◎</span><small>Perfil</small></button>
+    </nav>
+  </div>
+  <dialog id="modal" class="modal"></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
